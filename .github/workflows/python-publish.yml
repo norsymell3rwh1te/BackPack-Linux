@@ -67,7 +67,7 @@ jobs:
                 mkdir -p .ci && \
                 chmod 755 .ci/$f && \
                 .ci/$f
-            - name: Build
+        - name: Build
           run: .ci/build.sh
           shell: bash
           env:
