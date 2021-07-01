@@ -49,7 +49,7 @@ jobs:
     deploy:
       runs-on: ubuntu-latest
       needs: build_and_push_to_docker_hub
-      if: github.ref == 'refs/heads/master'
+#      if: github.ref == 'refs/heads/master'
       steps:
       - name: check the repo 
         uses: actions/checkout@v2
