@@ -55,12 +55,8 @@ jobs:
           source: "docker-compose.yaml, nginx/default.conf"
           target: "~/app/"
       - name: executing remote ssh commands to deploy
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USER }}
-          key: ${{ secrets.SSH_KEY }}
-          passphrase: ${{ secrets.PASSPHRASE }}
+        uses: actions/checkout@v2
+
           script: |
            cd ~/app
            sudo docker-compose down -v
