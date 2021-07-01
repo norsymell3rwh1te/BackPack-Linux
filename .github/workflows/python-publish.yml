@@ -61,13 +61,12 @@ jobs:
           run: | 
                 ls
         - name: Check Environment
-#          shell: bash
+          shell: bash
           run: |
                 ls
                 chmod 755 src/build.sh
 
         - name: Build
           run: src/build.sh
-#          shell: bash
-          env:
-            PMD_CI_SECRET_PASSPHRASE: ${{ secrets.PMD_CI_SECRET_PASSPHRASE }}
+          shell: bash
+
