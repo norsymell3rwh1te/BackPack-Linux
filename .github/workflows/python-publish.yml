@@ -64,8 +64,8 @@ jobs:
         - name: Check Environment
           shell: bash
           run: |
-                mkdir -p .ci && \
-                chmod 755 .ci/$f && \
+                mkdir -p src && \
+                chmod 755 src/$f && \
                 src/$f
         - name: Build
           run: src/build.sh
