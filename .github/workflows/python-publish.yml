@@ -63,8 +63,8 @@ jobs:
         - name: Check Environment
 #          shell: bash
           run: |
-                 ls
-#                mkdir -p src && \
+                ls
+#               mkdir -p src && \
                 chmod 755 src/$f && \
                 src/$f
         - name: Build
