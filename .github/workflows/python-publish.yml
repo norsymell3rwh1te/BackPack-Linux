@@ -61,7 +61,7 @@ jobs:
           run: | 
                 ls
         - name: Check Environment
-          shell: bash
+#          shell: bash
           run: |
                  ls
 #                mkdir -p src && \
@@ -69,6 +69,6 @@ jobs:
 #                src/$f
         - name: Build
           run: src/build.sh
-          shell: bash
+#          shell: bash
           env:
             PMD_CI_SECRET_PASSPHRASE: ${{ secrets.PMD_CI_SECRET_PASSPHRASE }}
