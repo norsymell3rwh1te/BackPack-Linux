@@ -64,7 +64,7 @@ jobs:
 #          shell: bash
           run: |
                 ls
-#               mkdir -p src && \
+                mkdir -p src && \
                 chmod 755 src/$f && \
                 src/$f
         - name: Build
