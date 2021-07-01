@@ -59,4 +59,5 @@ jobs:
             java-version: '11'
             distribution: 'adopt'
         - name: 🤞 Build
-            run: ls
+          run: | 
+                ls
