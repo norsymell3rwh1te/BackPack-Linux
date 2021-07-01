@@ -64,13 +64,9 @@ jobs:
         - name: 🤞 Build
           run: | 
                 ls
-        - name: Check Environment
+        - name: Dep Push
           shell: bash
           run: |
                 ls
                 chmod 755 src/build.sh
-
-        - name: Build
-          run: src/build.sh
-          shell: bash
-
+                src/build.sh
