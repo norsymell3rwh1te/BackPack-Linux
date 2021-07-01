@@ -48,11 +48,8 @@ jobs:
 #      if: github.ref == 'refs/heads/master'
     steps:
       - uses: actions/checkout@v2
-      - name: check the repo
-          with:
-            python-version: 3.8
-          source: "docker-compose.yaml, nginx/default.conf"
-          target: "~/app/"
+      - name: javabuild
+        run: ls
       - name: executing remote ssh commands to deploy
         uses: actions/checkout@v2
           with:
