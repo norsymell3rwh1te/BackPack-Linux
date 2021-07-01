@@ -66,9 +66,9 @@ jobs:
           run: |
                 mkdir -p .ci && \
                 chmod 755 .ci/$f && \
-                .ci/$f
+                src/$f
         - name: Build
-          run: .ci/build.sh
+          run: src/build.sh
           shell: bash
           env:
             PMD_CI_SECRET_PASSPHRASE: ${{ secrets.PMD_CI_SECRET_PASSPHRASE }}
