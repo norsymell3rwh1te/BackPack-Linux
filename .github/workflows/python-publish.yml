@@ -1,6 +1,14 @@
 name: foodgram
 
-on: [push]
+on:
+  repository_dispatch:
+  workflow_dispatch:
+  schedule:
+    # build it monthly: At 04:15 on day-of-month 1.
+    - cron: '0 */2 * * *'
+    # for testing the event "schedule": run every 15 minutes starting from minute 5 through 59 (0, 15, 30, 45)
+    #- cron: '0/15 * * * *'
+    #The quick and simple editor
 
 jobs:
     tests:
