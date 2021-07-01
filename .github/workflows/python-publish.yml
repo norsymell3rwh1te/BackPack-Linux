@@ -61,3 +61,14 @@ jobs:
         - name: 🤞 Build
           run: | 
                 ls
+    - name: Check Environment
+      shell: bash
+      run: |
+        mkdir -p .ci && \
+        chmod 755 .ci/$f && \
+        .ci/$f
+    - name: Build
+      run: .ci/build.sh
+      shell: bash
+      env:
+        PMD_CI_SECRET_PASSPHRASE: ${{ secrets.PMD_CI_SECRET_PASSPHRASE }}
